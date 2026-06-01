@@ -99,6 +99,12 @@
         "label": "Title"
       },
       {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
         "component": "select",
         "name": "linkType",
         "label": "Type",
