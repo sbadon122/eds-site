@@ -140,6 +140,61 @@ blockquote {
   margin-bottom: 0.25em;
 }
 
+.text-align-left,
+.text-align-left > * {
+  text-align: left;
+}
+
+.text-align-center,
+.text-align-center > * {
+  text-align: center;
+}
+
+.text-align-right,
+.text-align-right > * {
+  text-align: right;
+}
+
+.text-align-justify,
+.text-align-justify > * {
+  text-align: justify;
+}
+
+.text-color-black,
+.text-color-black :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: #000;
+}
+
+.text-color-dark-gray,
+.text-color-dark-gray :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--fng-dark-gray);
+}
+
+.text-color-blue,
+.text-color-blue :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--fng-blue);
+}
+
+.text-color-light-blue,
+.text-color-light-blue :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--fng-strong-blue);
+}
+
+.text-color-cyan,
+.text-color-cyan :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--fng-cyan);
+}
+
+.text-color-orange,
+.text-color-orange :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--fng-orange);
+}
+
+.text-color-white,
+.text-color-white :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: var(--background-color);
+}
+
 code,
 pre {
   font-size: var(--body-font-size-s);
