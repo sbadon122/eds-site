@@ -1,0 +1,18 @@
+.horizontal-rule {
+  box-sizing: border-box;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 10px 0;
+}
+
+.horizontal-rule .wrap-horizontal {
+  height: 2px;
+}
+
+.horizontal-rule hr {
+  height: 0;
+  margin: 35px 0;
+  border: 0;
+  border-top: 1px solid #525252;
+  border-bottom: 1px solid #525252;
+}

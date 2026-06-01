@@ -43,11 +43,24 @@
           "multi": false
         },
         {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "value": "",
+          "valueType": "string"
+        },
+        {
           "component": "richtext",
           "name": "text",
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "cta",
+          "label": "CTA",
+          "value": ""
         }
       ]
     }

@@ -40,6 +40,19 @@
           "value": "",
           "label": "Text",
           "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "ctaLabel",
+          "label": "CTA Text",
+          "value": "GET A FREE QUOTE",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "cta",
+          "label": "CTA Link",
+          "value": "/get-a-quote"
         }
       ]
     }

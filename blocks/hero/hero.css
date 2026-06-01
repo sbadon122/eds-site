@@ -4,24 +4,79 @@
 }
 
 .hero {
+  --hero-content-width: min(100%, 1198px);
+
   position: relative;
-  padding: 40px 24px;
+  box-sizing: border-box;
+  min-height: 0;
+  margin-bottom: 20px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  background-color: var(--fng-blue);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: auto 0 0;
+  height: auto;
   min-height: 300px;
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.hero::after {
+  display: none;
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 21px;
   color: var(--background-color);
+}
+
+.hero .hero-content > * {
+  max-width: 100%;
+}
+
+.hero .hero-content::after {
+  display: none;
+}
+
+.hero h1,
+.hero h2 {
+  margin: 0 0 21px;
+  color: var(--background-color);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.hero p {
+  color: var(--background-color);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hero .hero-cta-wrapper {
+  margin-top: 24px;
+}
+
+.hero a.hero-cta:any-link {
+  width: 100%;
+  min-width: 0;
+  font-size: 16px;
 }
 
 .hero picture {
   position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
+  z-index: 0;
+  inset: 0 0 auto;
   box-sizing: border-box;
+  height: auto;
+  aspect-ratio: 16 / 9;
 }
 
 .hero img {
@@ -32,6 +87,180 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    height: 490px;
+    padding: 0;
+  }
+
+  .hero::before {
+    inset: 0;
+    z-index: 1;
+    width: auto;
+    height: 100%;
+    min-height: 0;
+    background-image: url("./desktop-overlay.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 140% 488px;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero .hero-content {
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: var(--hero-content-width);
+    height: 100%;
+    padding: 103px 0 0;
+  }
+
+  .hero .hero-content::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: max(0px, calc((100% - 1198px) / 2));
+    display: block;
+    width: min(55%, 450px);
+    height: 100%;
+    border-right: 240px solid rgb(0 44 128 / 70%);
+    transform: skew(33deg);
+    pointer-events: none;
+  }
+
+  .hero .hero-content > * {
+    position: relative;
+    z-index: 3;
+    max-width: 380px;
+    margin-left: 30px;
+    padding-left: 20px;
+  }
+
+  .hero h1,
+  .hero h2 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero .hero-cta-wrapper {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 400px;
+    max-width: 400px;
+    height: 80px;
+    margin: 0;
+    padding: 20px;
+    background-image: linear-gradient(90deg, rgb(0 0 0 / 0%) 0, #000 35%, #000 100%);
+  }
+
+  .hero a.hero-cta:any-link {
+    width: auto;
+    min-width: 196px;
+    font-size: 16px;
+  }
+
+  .hero picture {
+    inset: 0;
+    height: 100%;
+    aspect-ratio: auto;
+  }
+}
+
+@media (width >= 992px) {
+  .hero .hero-content::after {
+    transform: skew(28deg);
+  }
+}
+
+@media (width >= 1050px) {
+  .hero .hero-content::after {
+    transform: skew(29deg);
+  }
+}
+
+@media (width >= 1100px) {
+  .hero .hero-content::after {
+    transform: skew(30.5deg);
+  }
+}
+
+@media (width >= 1150px) {
+  .hero .hero-content::after {
+    transform: skew(31.5deg);
+  }
+}
+
+@media (width >= 1200px) {
+  .hero .hero-content::after {
+    transform: skew(33deg);
+  }
+}
+
+@media (width >= 1250px) {
+  .hero .hero-content::after {
+    transform: skew(34deg);
+  }
+}
+
+@media (width >= 1300px) {
+  .hero .hero-content::after {
+    transform: skew(36deg);
+  }
+}
+
+@media (width >= 1350px) {
+  .hero .hero-content::after {
+    transform: skew(36.5deg);
+  }
+}
+
+@media (width >= 1400px) {
+  .hero .hero-content::after {
+    transform: skew(37deg);
+  }
+}
+
+@media (width >= 1450px) {
+  .hero .hero-content::after {
+    transform: skew(38deg);
+  }
+}
+
+@media (width >= 1500px) {
+  .hero .hero-content::after {
+    transform: skew(39deg);
+  }
+}
+
+@media (width >= 1550px) {
+  .hero .hero-content::after {
+    transform: skew(40deg);
+  }
+}
+
+@media (width >= 1600px) {
+  .hero .hero-content::after {
+    transform: skew(41deg);
+  }
+}
+
+@media (width >= 1650px) {
+  .hero .hero-content::after {
+    transform: skew(42deg);
+  }
+}
+
+@media (width >= 1700px) {
+  .hero .hero-content::after {
+    transform: skew(43deg);
   }
 }

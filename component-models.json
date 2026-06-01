@@ -114,6 +114,10 @@
           {
             "name": "secondary",
             "value": "secondary"
+          },
+          {
+            "name": "accent",
+            "value": "accent"
           }
         ]
       }
@@ -152,11 +156,24 @@
         "multi": false
       },
       {
+        "component": "text",
+        "name": "title",
+        "label": "Title",
+        "value": "",
+        "valueType": "string"
+      },
+      {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA",
+        "value": ""
       }
     ]
   },
@@ -212,7 +229,24 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "ctaLabel",
+        "label": "CTA Text",
+        "value": "GET A FREE QUOTE",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA Link",
+        "value": "/get-a-quote"
       }
     ]
+  },
+  {
+    "id": "horizontal-rule",
+    "fields": []
   }
 ]
