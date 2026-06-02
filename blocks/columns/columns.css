@@ -19,6 +19,25 @@
   display: block;
 }
 
+.columns.spaced-evenly {
+  display: grid;
+  gap: 4px;
+}
+
+.columns.spaced-evenly > div {
+  align-items: center;
+  gap: 4px;
+}
+
+.columns.spaced-evenly .teaser {
+  gap: 0;
+}
+
+.columns.spaced-evenly .teaser-content,
+.columns.spaced-evenly .teaser-text > :is(p, div) {
+  margin: 0;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
@@ -29,5 +48,16 @@
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns.spaced-evenly > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, max-content));
+    justify-content: space-evenly;
+    gap: 4px 72px;
+  }
+
+  .columns.spaced-evenly > div > div {
+    flex: unset;
   }
 }
