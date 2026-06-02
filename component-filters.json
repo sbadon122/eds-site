@@ -16,7 +16,8 @@
       "cards",
       "columns",
       "fragment",
-      "horizontal-rule"
+      "horizontal-rule",
+      "teaser"
     ]
   },
   {
@@ -38,7 +39,8 @@
       "image",
       "button",
       "title",
-      "columns"
+      "columns",
+      "teaser"
     ]
   }
 ]

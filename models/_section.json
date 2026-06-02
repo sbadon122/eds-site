@@ -51,7 +51,8 @@
         "cards",
         "columns",
         "fragment",
-        "horizontal-rule"
+        "horizontal-rule",
+        "teaser"
       ]
     }
   ]
