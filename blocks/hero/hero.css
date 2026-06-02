@@ -58,11 +58,11 @@
   line-height: 1.1;
 }
 
-.hero .hero-description > :first-child {
+.hero .hero-copy > :first-child {
   margin-top: 0;
 }
 
-.hero .hero-description > :last-child {
+.hero .hero-copy > :last-child {
   margin-bottom: 0;
 }
 
