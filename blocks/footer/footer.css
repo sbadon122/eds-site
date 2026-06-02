@@ -216,6 +216,15 @@ footer .footer .footer-bottom > ul a:any-link {
   line-height: normal;
 }
 
+footer .footer .footer-bottom > ul strong {
+  display: inline;
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
 footer .footer .default-content-wrapper > p:last-child {
   margin-bottom: 0;
 }
