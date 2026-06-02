@@ -108,6 +108,28 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function decorateNavTools(nav) {
+  nav.querySelectorAll('.nav-tools .default-content-wrapper > ul').forEach((list) => {
+    list.classList.add('nav-tools-list');
+    list.querySelectorAll(':scope > li').forEach((item) => {
+      item.classList.add('nav-tools-item');
+      const lineBreak = item.querySelector('br');
+      if (!lineBreak) return;
+
+      let node = lineBreak.nextSibling;
+      while (node) {
+        const next = node.nextSibling;
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+          const emphasis = document.createElement('strong');
+          emphasis.textContent = node.textContent.trim();
+          node.replaceWith(emphasis);
+        }
+        node = next;
+      }
+    });
+  });
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -151,6 +173,8 @@ export default async function decorate(block) {
       });
     });
   }
+
+  decorateNavTools(nav);
 
   // hamburger for mobile
   const hamburger = document.createElement('div');

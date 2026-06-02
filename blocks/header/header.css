@@ -158,6 +158,13 @@ header nav .nav-sections ul {
   padding-left: 0;
 }
 
+header nav .nav-tools .nav-tools-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 header nav .nav-sections .default-content-wrapper > ul > li {
   border-top: 1px solid var(--light-color);
   padding: 16px 0;
@@ -256,13 +263,44 @@ header nav .nav-tools a {
     display: block;
   }
 
+  header nav .nav-tools .nav-tools-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0 14px 0 0;
+    color: #000;
+    font-family: var(--body-font-family);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    text-align: left;
+  }
+
+  header nav .nav-tools .nav-tools-item {
+    margin: 0;
+    padding: 0 14px;
+    color: #000;
+    font-family: var(--body-font-family);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
   header nav .nav-tools p + p {
     padding-left: 14px;
     border-left: 1px solid var(--light-color);
   }
 
-  header nav .nav-tools a {
+  header nav .nav-tools a,
+  header nav .nav-tools .nav-tools-list a {
     color: #000;
+  }
+
+  header nav .nav-tools .nav-tools-list strong,
+  header nav .nav-tools .nav-tools-list b {
+    font-weight: 700;
   }
 
   header nav .nav-sections,
