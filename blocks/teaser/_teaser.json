@@ -105,6 +105,22 @@
               "value": "text-color-orange"
             },
             {
+              "name": "Green",
+              "value": "text-color-green"
+            },
+            {
+              "name": "Red",
+              "value": "text-color-red"
+            },
+            {
+              "name": "Grey Blue",
+              "value": "text-color-grey-blue"
+            },
+            {
+              "name": "Muted Orange",
+              "value": "text-color-muted-orange"
+            },
+            {
               "name": "White",
               "value": "text-color-white"
             }

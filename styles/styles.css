@@ -190,6 +190,26 @@ blockquote {
   color: var(--fng-orange);
 }
 
+.text-color-green,
+.text-color-green :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: #039a67;
+}
+
+.text-color-red,
+.text-color-red :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: #cc2027;
+}
+
+.text-color-grey-blue,
+.text-color-grey-blue :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: #445487;
+}
+
+.text-color-muted-orange,
+.text-color-muted-orange :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
+  color: #e78d24;
+}
+
 .text-color-white,
 .text-color-white :where(p, h1, h2, h3, h4, h5, h6, li, a, span, strong, em) {
   color: var(--background-color);
