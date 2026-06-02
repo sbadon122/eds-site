@@ -201,6 +201,13 @@
         "label": "Rows"
       },
       {
+        "component": "text",
+        "valueType": "number",
+        "name": "gap",
+        "value": "24",
+        "label": "Gap"
+      },
+      {
         "component": "select",
         "name": "classes_layout",
         "label": "Layout",
