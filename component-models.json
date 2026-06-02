@@ -91,7 +91,7 @@
       },
       {
         "component": "select",
-        "name": "classes_alignment",
+        "name": "classesAlignment",
         "label": "Alignment",
         "value": "",
         "valueType": "string",
@@ -120,8 +120,8 @@
       },
       {
         "component": "select",
-        "name": "classes_color",
-        "label": "Color",
+        "name": "classesColor",
+        "label": "Color Picker",
         "value": "",
         "valueType": "string",
         "options": [
