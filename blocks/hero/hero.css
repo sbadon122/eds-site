@@ -54,6 +54,18 @@
   font-weight: 300;
 }
 
+.hero [class~="adaptive-carousel--title"] {
+  line-height: 1.1;
+}
+
+.hero .hero-description > :first-child {
+  margin-top: 0;
+}
+
+.hero .hero-description > :last-child {
+  margin-bottom: 0;
+}
+
 .hero p {
   color: var(--background-color);
   font-size: 16px;
