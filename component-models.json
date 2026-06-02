@@ -216,6 +216,23 @@
             "value": "spaced-evenly"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "classes_valign",
+        "label": "Vertical Alignment",
+        "value": "",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "Top",
+            "value": "align-top"
+          }
+        ]
       }
     ]
   },
