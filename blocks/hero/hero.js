@@ -8,6 +8,10 @@ function getLink(cell) {
   return link?.getAttribute('href') || text || '';
 }
 
+function hasLink(cell) {
+  return !!cell?.querySelector?.('a[href]');
+}
+
 function moveChildren(from, to) {
   while (from?.firstChild) to.append(from.firstChild);
 }
@@ -18,6 +22,10 @@ function hasContent(cell) {
 
 function hasStructuredCopy(cell) {
   return !!cell?.querySelector?.('h1,h2,h3,h4,h5,h6,p,ul,ol,blockquote');
+}
+
+function looksLikeDescription(cell) {
+  return !hasContent(cell) || hasStructuredCopy(cell) || cell.textContent.trim().length > 40;
 }
 
 function appendTitle(cell, content) {
@@ -78,10 +86,12 @@ export default function decorate(block) {
   const [imageRow] = rows;
   const hasAuthoredAltRow = rows.length > 3;
   const altRow = hasAuthoredAltRow ? rows[1] : null;
-  const firstCopyRow = hasAuthoredAltRow ? rows[2] : rows[1];
+  const possibleDescriptionCell = getCell(rows[3]);
+  const possibleCtaCell = getCell(rows[4]);
   const usesSplitCopy = hasAuthoredAltRow
     && rows.length > 4
-    && !hasStructuredCopy(getCell(firstCopyRow));
+    && hasLink(possibleCtaCell)
+    && looksLikeDescription(possibleDescriptionCell);
   const {
     titleRow,
     descriptionRow,
