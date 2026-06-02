@@ -141,22 +141,22 @@ blockquote {
 }
 
 .text-align-left,
-.text-align-left > * {
+.text-align-left :where(p, h1, h2, h3, h4, h5, h6, li, blockquote) {
   text-align: left;
 }
 
 .text-align-center,
-.text-align-center > * {
+.text-align-center :where(p, h1, h2, h3, h4, h5, h6, li, blockquote) {
   text-align: center;
 }
 
 .text-align-right,
-.text-align-right > * {
+.text-align-right :where(p, h1, h2, h3, h4, h5, h6, li, blockquote) {
   text-align: right;
 }
 
 .text-align-justify,
-.text-align-justify > * {
+.text-align-justify :where(p, h1, h2, h3, h4, h5, h6, li, blockquote) {
   text-align: justify;
 }
 
